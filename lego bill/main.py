@@ -25,7 +25,7 @@ def lego():
         else:
             print("Invalid category! Try again.")
 
-    # ✅ Generate Bill
+    
     if items:
         now = datetime.datetime.now()
         filename = "lego_bill.txt"
@@ -42,7 +42,9 @@ def lego():
             f.write("--------------------------------------\n")
             f.write(f"Grand Total:         Rs.{grand_total}\n")
             f.write("======================================\n")
-
+            
+            f.close()
+        
         print("\nBill generated successfully! Check 'lego_bill.txt'.")
     else:
         print("No items purchased. Bill not generated.")
